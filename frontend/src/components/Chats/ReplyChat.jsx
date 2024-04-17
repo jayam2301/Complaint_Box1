@@ -19,7 +19,7 @@ const ReplyChat = () => {
       const id = auth.email;
       console.log();
       try {
-        const res = await axios.get("http://localhost:8000/getallappid", {});
+        const res = await axios.get("http://localhost:5000/getallappid", {});
         console.log(res.data);
         setIdList(res.data);
       } catch (error) {
@@ -35,7 +35,7 @@ const ReplyChat = () => {
       console.log(currentId);
       const email_id = auth.email;
       try {
-        const res = await axios.get("http://localhost:8000/getchats", {
+        const res = await axios.get("http://localhost:5000/getchats", {
           params: {
             id: currentId,
           },
@@ -59,7 +59,7 @@ const ReplyChat = () => {
         console.log(cap);
         const currentAppId = cap;
         console.log(load);
-        const res = await axios.post(`http://localhost:8000/sendmessage`, {
+        const res = await axios.post(`http://localhost:5000/sendmessage`, {
           currentAppId,
           email_id,
           message,
@@ -68,7 +68,7 @@ const ReplyChat = () => {
         });
         setMessage("");
         try {
-          const res = await axios.get("http://localhost:8000/getchats", {
+          const res = await axios.get("http://localhost:5000/getchats", {
             params: {
               id: currentId,
             },

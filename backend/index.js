@@ -15,21 +15,21 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const USER = process.env.USER_NAME;
 const PASS = process.env.PASSWORD;
-// mongoose
-//   .connect(
-//     `mongodb+srv://${USER}:${PASS}@cluster0.p9qkba1.mongodb.net/?retryWrites=true&w=majority`
-//   )
-//   .then(() => {
-//     console.log("server is running");
-//   })
-//   .catch((err) => {
-//     if (!err.data?.message) {
-//       console.log(err);
-//       console.log("Server error please try later!");
-//     }
-//   });
+mongoose
+  .connect(
+    `mongodb+srv://${USER}:${PASS}@cluster0.p9qkba1.mongodb.net/?retryWrites=true&w=majority`
+  )
+  .then(() => {
+    console.log("server is running");
+  })
+  .catch((err) => {
+    if (!err.data?.message) {
+      console.log(err);
+      console.log("Server error please try later!");
+    }
+  });
 
-// app.use("/", router);
+app.use("/", router);
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`Connected to port ${PORT}`);

@@ -19,17 +19,17 @@ const Footer = () => {
           <Link to="" className="link-foot">
             Help center
           </Link>
-          <Link to="https://github.com/saxena-nikhil738" className="link-foot">
+          <Link to="https://github.com/jayam2301" className="link-foot">
             GitHub
           </Link>
-          <Link to="https://twitter.com/NikhilSaxena738" className="link-foot">
+          <Link to="https://twitter.com/" className="link-foot">
             Twitter
           </Link>
           <Link to="" className="link-foot">
             Privacy & Policy
           </Link>
-          <Link to="mailto: nikhilsaxena738@gmail.com" className="link-foot">
-            nikhilsaxena738@gmail.com
+          <Link to="mailto: jayam010223@gmail.com" className="link-foot">
+            jayam010223@gmail.com
           </Link>
           <Link to="" className="link-foot">
             Terms & Conditions

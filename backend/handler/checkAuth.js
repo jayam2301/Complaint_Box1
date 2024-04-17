@@ -42,7 +42,7 @@ export const generateAndSendOTP = async (email) => {
     secure: true,
     auth: {
       user: "jayam010223@gmail.com",
-      pass: "usch khfq irmx xqqj",
+      pass: "skja bnna snse sjaj",
     },
   });
 

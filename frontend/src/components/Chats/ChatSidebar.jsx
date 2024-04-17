@@ -28,7 +28,7 @@ const ChatSidebar = () => {
       const id = auth.email;
       console.log();
       try {
-        const res = await axios.get("http://localhost:8000/getappid", {
+        const res = await axios.get("http://localhost:5000/getappid", {
           params: {
             email: id,
           },
@@ -46,7 +46,7 @@ const ChatSidebar = () => {
     async function getChats() {
       const email_id = auth.email;
       try {
-        const res = await axios.get("http://localhost:8000/getchats", {
+        const res = await axios.get("http://localhost:5000/getchats", {
           params: {
             id: currentId,
             email: email_id,
@@ -72,7 +72,7 @@ const ChatSidebar = () => {
         const diffId = auth.enum;
         const currentAppId = cap;
         console.log(load);
-        const res = await axios.post(`http://localhost:8000/sendmessage`, {
+        const res = await axios.post(`http://localhost:5000/sendmessage`, {
           currentAppId,
           email_id,
           message,
